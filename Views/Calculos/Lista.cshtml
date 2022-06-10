@@ -1,0 +1,59 @@
+@model List<Calculos>
+
+<style>
+table, th, td {
+  border: 1px solid black; text-align: center; vertical-align: middle; 
+}
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+<h2>Resumo dos Calculos Efetuados</h2>
+<br>
+<table class=table>
+    <tr>
+        <th>IdPT</th>
+        <th>Investimento</th>
+        <th>TaxaNominal</th>
+        <th>Inicio</th>
+        <th>Vencimento</th>
+        <th>Dias</th>
+        <th>Anos</th>
+        <th>IR</th>
+        <th>Juros</th>
+        <th>Retorno</th>
+        <th>TaxaEfetiva</th>
+        <th>Id Usuario</th>
+        <th>Operações</th>
+
+    </tr>
+
+    @foreach (Calculos i in Model)
+    {
+    <tr>
+        <th>@i.IdPT</th>
+        <th>@i.Investimento</th>
+        <th>@i.TaxaNominal</th>
+        <th>@i.Inicio</th>
+        <th>@i.Vencimento</th>
+        <th>@i.Dias</th>
+        <th>@i.Anos</th>
+        <th>@i.IR</th>
+        <th>@i.Juros</th>
+        <th>@i.Retorno</th>
+        <th>@i.TaxaEfetiva</th>
+        <th>@i.Id</th>
+        <td>
+          <a href="/Calculos/Alterar?IdPT=@i.IdPT">Alterar</a>
+
+          <a href="/Calculos/Excluir?IdPT=@i.IdPT">Excluir</a>
+        </td>
+        
+    </tr>   
+    }
+</table>
+<br>
+
+

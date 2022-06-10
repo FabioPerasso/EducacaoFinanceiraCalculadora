@@ -1,0 +1,40 @@
+CREATE DATABASE ProjIntegrador;
+
+CREATE TABLE Usuario(
+	Id int(11) AUTO_INCREMENT,
+    	Nome varchar(200),
+    	Login varchar(30),
+    	Senha varchar(30),
+    	DataNascimento datetime,
+    	PRIMARY KEY (Id)
+);
+
+
+CREATE TABLE Calculos(	
+	IdPT int(11) AUTO_INCREMENT,
+	Id int(11),
+	Investimento double(9,2),
+        	TaxaNominal double(9,2),
+       	Inicio datetime,
+        	Vencimento datetime,
+        	Dias double(9,2),
+        	Anos double(9,2),
+        	Juros double(9,2),
+        	Retorno double(9,2),
+        	TaxaEfetiva double(9,2),
+ 	PRIMARY KEY (IdPT),
+ 	FOREIGN Key(Id) REFERENCES Usuario(Id)
+);
+
+
+INSERT INTO Usuario (Nome,Login,Senha,DataNascimento) VALUES ('Fabio Luciano','fabluc','1234','1962-06-24')
+INSERT INTO Usuario (Nome,Login,Senha,DataNascimento) VALUES ('Paulo Vitor','pauvit','1234','2007-04-28')
+ALTER TABLE Calculos ADD IR double(9,3)
+
+
+
+
+
+
+
+

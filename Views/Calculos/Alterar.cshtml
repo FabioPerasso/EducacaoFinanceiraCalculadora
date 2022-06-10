@@ -1,0 +1,39 @@
+@model Calculos
+@{
+    ViewData["Title"] = "AlteraçãoCalc";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p class="text-danger">
+   @ViewData["mensagem"] 
+
+</p>
+
+<form method="post" asp-action="Alterar">
+
+    <p>
+        <label asp-for="Investimento">Investimento:</label>
+        <input asp-for="Investimento">
+    </p>
+
+     <p>
+        <label asp-for="TaxaNominal">Taxa Nominal:</label>
+        <input asp-for="TaxaNominal">
+    </p>
+
+    <p>
+        <label asp-for="Inicio">Início:</label>
+        <input asp-for="Inicio" type="date">
+    </p>
+
+    <p>
+        <label asp-for="Vencimento">Vencimento:</label>
+        <input asp-for="Vencimento" type="date">
+    </p>    
+    <p>
+        <input asp-for="IdPT" type="hidden">
+        <input type="submit" value="Alterar">
+    </p>
+
+
+</form>

@@ -1,0 +1,26 @@
+@model ItemCalculoTaxEf
+
+<h2>Inserir dados solicitados</h2>
+
+<form method="POST" asp-controller="Home" asp-action="CadastroTaxaNom">
+
+<p>
+    <label asp-for="invest">Valor a ser investido=</label>
+    <input asp-for="invest">
+</p>
+<p>
+    <label asp-for="taxa">Taxa Nominal anual (Ex>: 12,5% = 12,5)=</label>
+    <input asp-for="taxa">
+</p>
+<p>
+    <label asp-for="hoje">Data início aplicação=</label>
+    <input asp-for="hoje">
+</p>
+<p>
+    <label asp-for="Vencimento">Data Vencimento aplicação=</label>
+    <input asp-for="Vencimento">
+</p>
+
+<input type="submit" value="Cadastrar"
+
+</form>

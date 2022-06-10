@@ -1,0 +1,74 @@
+@model List<ItemCalculoTaxEf>
+
+<style>
+table, th, td {
+  border: 1px solid black; text-align: center; vertical-align: middle; 
+}
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+<h2>Resumo do Calculo Taxa Nominal x Efetiva</h2>
+<br>
+<table>
+    <tr>
+        <th>Investimento</th>
+        <th>Taxa Nominal Anual</th>
+        <th>Início</th>
+        <th>Vencimento</th>
+        <th>Dias</th>
+        <th>Anos</th>
+        <th>Juros</th>
+        <th>Retorno</th>
+        <th>Taxa Efetiva Anual</th>
+    </tr>
+    @{double somaRetorno = 0;}
+    @foreach (ItemCalculoTaxEf ip in Model)
+    {
+    <tr>
+        <td> @ip.invest.ToString("C") </td>
+        <td> @ip.taxa </td>
+        <td> @ip.hoje</td>
+        <td> @ip.Vencimento</td>
+        @{ double dias;  dias = (ip.Vencimento - ip.hoje).TotalDays;}
+        <td> @dias.ToString("N0") </td>
+        @{ double anos; anos = @dias / 365;}
+        <td> @anos.ToString("F") </td>
+        @{ double ir; 
+            if ( dias < 180) ir = 0.225f;      
+            else
+                 if ( dias < 360) ir = 0.2f; else
+                    if ( dias < 720) ir = 0.175f; 
+                    else ir = 0.15f; 
+                }
+        @{ double juros;
+        juros = (Math.Pow((1+ip.taxa/100),anos)-1) * ip.invest * (1-ir);}
+        <td> @juros.ToString("C") </td>
+        @{double retorno;
+         retorno = ip.invest + juros;}
+        <td> @retorno.ToString("C") </td> 
+        @{ double taxaefetiva;  
+            taxaefetiva= (Math.Pow(retorno / ip.invest,(1/anos)) - 1)*100;}
+        <td> @taxaefetiva.ToString("F") </td>
+    </tr> 
+    somaRetorno = somaRetorno + retorno;
+    }
+</table>
+<br>
+<hr>
+Total de Cálculos: @Dados.CalculoAtual.TotalRegistros() <br> <hr>
+Total Investido..: @Dados.CalculoAtual.somaItens().ToString("C")<br> <hr>
+Total Retornado..: @somaRetorno.ToString("C")<br> <hr>
+ 
+<p>
+    <a href="/Home/Index"> 
+     Voltar
+    </a>
+</p>
+		<footer>
+			<hr>
+			<h5>Elaborado por Fabio Perasso</h5>
+
+		</footer>

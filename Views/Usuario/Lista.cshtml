@@ -1,0 +1,43 @@
+@model List<Usuario>
+
+<style>
+table, th, td {
+  border: 1px solid black; text-align: center; vertical-align: middle; 
+}
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+<h1>Resumo dos Usuários</h1>
+<br>
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Login</th>
+        <th>Senha</th>
+        <th>Data Nascimento</th>
+        <th>Operações</th>
+    </tr>
+
+    @foreach (Usuario i in Model)
+    {
+    <tr>
+        <td>@i.Id</td>
+        <td>@i.Nome</td>
+        <td>@i.Login</td>
+        <td>@i.Senha</td>
+        <td>@i.DataNascimento</td>
+        <td>
+          <a href="/Usuario/Alterar?Id=@i.Id">Alterar</a>
+
+          <a href="/Usuario/Excluir?Id=@i.Id">Excluir</a>
+        </td>
+    </tr>   
+    }
+</table>
+<br>
+
+
