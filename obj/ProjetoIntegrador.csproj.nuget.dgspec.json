@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\flper\\Documents\\EAD Senac\\ProjetoIntegradorV2\\ProjetoIntegrador.csproj": {}
+    "C:\\Users\\flper\\Documents\\EAD Senac\\ProjetoIntegMVC_SQL\\ProjetoIntegrador.csproj": {}
   },
   "projects": {
-    "C:\\Users\\flper\\Documents\\EAD Senac\\ProjetoIntegradorV2\\ProjetoIntegrador.csproj": {
+    "C:\\Users\\flper\\Documents\\EAD Senac\\ProjetoIntegMVC_SQL\\ProjetoIntegrador.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\flper\\Documents\\EAD Senac\\ProjetoIntegradorV2\\ProjetoIntegrador.csproj",
+        "projectUniqueName": "C:\\Users\\flper\\Documents\\EAD Senac\\ProjetoIntegMVC_SQL\\ProjetoIntegrador.csproj",
         "projectName": "ProjetoIntegrador",
-        "projectPath": "C:\\Users\\flper\\Documents\\EAD Senac\\ProjetoIntegradorV2\\ProjetoIntegrador.csproj",
+        "projectPath": "C:\\Users\\flper\\Documents\\EAD Senac\\ProjetoIntegMVC_SQL\\ProjetoIntegrador.csproj",
         "packagesPath": "C:\\Users\\flper\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\flper\\Documents\\EAD Senac\\ProjetoIntegradorV2\\obj\\",
+        "outputPath": "C:\\Users\\flper\\Documents\\EAD Senac\\ProjetoIntegMVC_SQL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\flper\\AppData\\Roaming\\NuGet\\NuGet.Config"

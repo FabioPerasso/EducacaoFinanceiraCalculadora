@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XCAsg0J7ppzpAtswd8wlfgVK08gvNjKAqrQNblmAicDRTe9DH3oUVpk1xD30Tc6+KDi18v1ZsQoJXZu6FRjopQ==",
+  "dgSpecHash": "KAewnek1VG/3dOExh9fEwIUAlfSYZdC4kA49ScNZMr1CnamTJRaZYg2dBNfjWHZ8S/jOzNj4zlM0eVXoWlLWDA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\flper\\Documents\\EAD Senac\\ProjetoIntegradorV2\\ProjetoIntegrador.csproj",
+  "projectFilePath": "C:\\Users\\flper\\Documents\\EAD Senac\\ProjetoIntegMVC_SQL\\ProjetoIntegrador.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\flper\\.nuget\\packages\\mysqlconnector\\2.1.9\\mysqlconnector.2.1.9.nupkg.sha512",
     "C:\\Users\\flper\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512"
